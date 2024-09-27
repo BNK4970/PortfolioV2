@@ -1,11 +1,12 @@
 import Button from "@/components/CTA/Button";
 import DB from "../../assets/svg/database.svg";
 import REACT from "../../assets/svg/react.svg";
-import NEXT from "../../assets/svg/nextdotjs.svg";
 import GIT from "../../assets/svg/git.svg";
 import BASH from "../../assets/svg/gnubash.svg";
 import BLEND from "../../assets/svg/blend.svg";
 import Image from "next/image";
+
+
 interface CardProps {
   label: string;
   description: string;
@@ -14,11 +15,13 @@ interface CardProps {
 }
 export const Card: React.FC<CardProps> = (props) => {
   return (
-    <div className="grid grid-rows-[1fr_auto] gap-4 outline outline-2 outline-[rgb(var(--secondary))] rounded-md p-4 relative overflow-clip">
+    <div className="grid grid-rows-[1fr_auto] gap-4 border-2 border-[rgb(var(--secondary))] rounded-md p-4 relative overflow-clip">
       <div className="flex flex-col row-span-1 gap-1">
         <div className="flex items-center justify-between gap-2">
           <h3 className="uppercase text-xl">{props.label}</h3>
-          <span className="font-semibold text-xl text-[rgb(var(--primary))]">{props.prix}€</span>
+          <span className="font-semibold text-xl text-[rgb(var(--primary))]">
+            {props.prix}€
+          </span>
         </div>
         <p className="text-[rgb(var--foreground)]">{props.description}</p>
       </div>
@@ -30,14 +33,15 @@ export const Card: React.FC<CardProps> = (props) => {
           Acheter
         </Button>
       </div>
-      <div className="absolute -z-10 top-0 w-full h-full grid place-items-center bg-[rgb(var(--secondary),0.3)]">
+      {/* arriere plan */}
+      <div className="absolute -z-10 top-0 w-full h-full grid place-items-center bg-[rgb(var(--secondary),0.1)]">
         <Image
           priority
           src={props.logo}
           height="200"
           width="200"
           alt=""
-          className="ml-auto -rotate-12 opacity-30"
+          className="ml-auto -rotate-12 opacity-10"
         />
       </div>
     </div>
@@ -84,27 +88,33 @@ export default function Home() {
   ];
   return (
     <main className="w-full">
-      <section>
+      <section className="">
+        {/* pub */}
         <marquee
           behavior=""
           direction=""
-          className="border-b-2 border-t-2 border-[rgb(var(--secondary))] mb-4"
+          className="border-b-2 h-auto py-1 h-10 border-t-2 border-[rgb(var(--secondary))]"
         >
           <p className="text-xl font-semibold text-[rgb(var(--foreground))]">
             -50% jusqu&apos;à janvier pour le premier achat !
           </p>
         </marquee>
-        <h2 className="uppercase text-3xl">Des cours au choix à disposition</h2>
-        <div className=" grid grid-cols-1 gap-4 py-4">
-          {COURSES.map((card, idx) => (
-            <Card
-              key={idx}
-              label={card.label}
-              description={card.description}
-              prix={card.prix}
-              logo={card.logo}
-            />
-          ))}
+        <div className="flex flex-col gap-4">
+          {/* titre */}
+          <h2 className="uppercase text-3xl">Des cours aux chox</h2>
+            {/* cards */}
+            <div className=" grid grid-cols-auto-fit-300 gap-4 w-full mx-auto">
+              {/* card */}
+              {COURSES.map((card, idx) => (
+                <Card
+                  key={idx}
+                  label={card.label}
+                  description={card.description}
+                  prix={card.prix}
+                  logo={card.logo}
+                />
+              ))}
+            </div>
         </div>
       </section>
     </main>

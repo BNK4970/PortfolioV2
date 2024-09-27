@@ -12,6 +12,7 @@ export async function getBlogBySlug(slug: string) {
     title: string
     author: string
     publishDate: string
+    description: string
   }>({
     source: fileContent,
     options: { parseFrontmatter: true },

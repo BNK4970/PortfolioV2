@@ -23,6 +23,9 @@ const config: Config = {
       gridTemplateRows: {
         about: "repeat(auto-fil"
       },
+      gridTemplateColumns: {
+        'auto-fit-300': 'repeat(auto-fit, minmax(300px, 1fr))',
+      },
     },
   },
   plugins: [],

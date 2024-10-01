@@ -26,7 +26,7 @@ const Home = () => {
         <Project/>
       </section>
       {/* services */}
-      <section>
+      <section className="h-fit">
         <Service/>
       </section>
       {/* contact */}

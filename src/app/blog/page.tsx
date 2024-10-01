@@ -7,9 +7,10 @@ export default async function BlogsPage() {
       {blogs.map((blog, i) => (
         <article
           key={i}
-          className="grid grid-rows-[auto_auto_75px] text-3xl p-2 gap-2 border-2 border-[rgb(var(--secondary))] bg-[rgb(var(--secondary),0.3)] rounded-md"
+          className="grid grid-rows-[auto_auto_50px] text-3xl p-4 gap-2 border-2 border-[rgb(var(--secondary))] bg-[rgb(var(--secondary),0.3)] rounded-md cursor-pointer hover:border-primary duration-200"
         >
           <h1 className="uppercase text-2xl">{blog.frontmatter.title}</h1>
+          {/* author */}
           <div className="grid grid-rows-2 grid-cols-[auto_1fr] flex-col text-lg gap-y-1 gap-x-2">
             <p className="col-start-2 col-span-1 row-span-1">
               {blog.frontmatter.author}

@@ -21,10 +21,10 @@ const config: Config = {
         hero: "calc(100vh - 80px)"
       },
       gridTemplateRows: {
-        about: "repeat(auto-fil"
+        'auto-fit-300': 'repeat(auto-fit, 1fr)',
       },
       gridTemplateColumns: {
-        'auto-fit-300': 'repeat(auto-fit, minmax(300px, 1fr))',
+        'auto-fit-300': 'repeat(auto-fit, minmax(400px, 1fr))',
       },
     },
   },

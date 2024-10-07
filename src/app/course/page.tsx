@@ -1,4 +1,5 @@
 "use client";
+import { useRouter } from "next/navigation"
 import BACK from "../../assets/svg/back.svg";
 import REACT from "../../assets/svg/react.svg";
 import GIT from "../../assets/svg/git.svg";
@@ -13,8 +14,12 @@ interface CardProps {
   topos: { chapitre: number; video: number; heure: number }[];
 }
 export const Card: React.FC<CardProps> = (props) => {
+  const router = useRouter();
+  const handleClick = () => {
+    router.push(`course/${props.label.toLocaleLowerCase()}`)
+  }
   return (
-    <div className="grid group grid-rows-[fit-content_auto] h-full border-2 border-[rgb(var(--secondary))] cursor-pointer hover:border-[rgb(var(--primary))] duration-200 rounded-sm relative overflow-clip">
+    <div onClick={()=>handleClick()} className="grid group grid-rows-[fit-content_auto] h-full border-2 border-[rgb(var(--secondary))] cursor-pointer hover:border-[rgb(var(--primary))] duration-200 rounded-sm relative overflow-clip bg-transparent">
       <div
         id="data"
         className="relative flex flex-col row-span-1 h-fit gap-1 p-4 row-start-1 row-end-1 col-start-1 col-end-1"
@@ -126,7 +131,7 @@ export default function Home() {
     <main className="w-full">
       <section className="h-fit">
         {/* pub */}
-        <marquee
+        {/* <marquee
           behavior=""
           direction=""
           className="border-b-2 h-auto py-1 h-10 border-t-2 border-[rgb(var(--secondary))]"
@@ -134,7 +139,7 @@ export default function Home() {
           <p className="text-xl font-semibold text-[rgb(var(--foreground))]">
             -50% jusqu&apos;à janvier pour le premier achat !
           </p>
-        </marquee>
+        </marquee> */}
         <div className="flex flex-col gap-4">
           {/* titre */}
           <h2 className="uppercase text-3xl">Des cours aux chox</h2>

@@ -5,7 +5,7 @@ interface NavbarProps {
 
 }
 export const Navbar: React.FC<NavbarProps> = () => {
-  const NAVIGATION = ['Portfolio', 'blog', 'course'];
+  const NAVIGATION = ['portfolio', 'blog', 'course'];
   return(
     <header className='w-full h-20 bg-[rgb(var(--background))] fixed top-0 px-[25%] flex justify-between items-center z-50'>
       <h1 className='text-[rgb(var(--primary))] text-4xl'>BNK4970</h1>

@@ -60,3 +60,28 @@ section {
     background-color: rgb(var(--accent1));
   } */
 }
+
+/* custom scroll bar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(var(--secondary),0.4);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--secondary));
+  transition-duration: 200ms;
+  cursor: grab;
+  border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--primary));
+  transition-duration: 200ms;
+}

@@ -22,6 +22,7 @@ export default async function BlogsPage() {
           </div>
           {/* <Link href={`/blog/${blog.slug}`}>Read More</Link> */}
           <p className="text-lg">{blog.frontmatter.description}</p>
+          <span>{blog.slug}</span>
         </article>
       ))}
     </main>

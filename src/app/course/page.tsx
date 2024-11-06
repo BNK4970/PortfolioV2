@@ -14,13 +14,13 @@ export const Card: React.FC<CardProps> = (props) => {
         id="data"
         className="relative flex flex-col row-span-1 h-fit gap-1 p-4 row-start-1 row-end-1 col-start-1 col-end-1"
       >
-        <h3 className="uppercase text-xl">{props.label}</h3>
+        <h3 className="uppercase text-xl font-semibold">{props.label}</h3>
         <p className="absolute right-0 top-0 bg-[rgb(var(--secondary),0.5)] px-4 py-1 border-l-2 border-b-2 border-secondary rounded-sm font-semibold">
           <span className="text-primary text-2xl">{props.prix}</span> €
         </p>
         <p className="text-[rgb(var--foreground)]">{props.description}</p>
       </div>
-      <ul className="flex items-center justify-start w-full gap-4 row-span-1 bg-[rgb(var(--secondary),0.5)] border-t-2 border-secondary px-4 py-1">
+      <ul className="flex items-center text-foreground-secondary justify-start w-full gap-4 row-span-1 bg-[rgb(var(--secondary),0.5)] border-t-2 border-secondary px-4 py-1">
         {props.topos.map((topo, idx) => (
           <li key={idx}>{topo.chapitre} chapitres </li>
         ))}

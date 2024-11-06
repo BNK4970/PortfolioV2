@@ -40,7 +40,7 @@ const modules = [1,2,3,4,5];
       <div className="py-20">
         <h1 className="text-3xl uppercase">{course.title}</h1>
       </div>
-      <h2 className="text-xl">Découvrir {course.title} avec des tutoriels</h2>
+      <h2 className="text-xl">Découvrir {course.title} avec des modules</h2>
       <div className="grid grid-rows-auto-fit-300 grid-cols-auto-fit-300 gap-4">
         {modules.map((module,idx)=>(
           <Card key={idx} title="titre" description="description" level="junior" time={50}/>

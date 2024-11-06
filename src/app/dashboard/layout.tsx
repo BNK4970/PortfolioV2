@@ -3,24 +3,24 @@ export default function Layout({
     course,
     reduction,
     notification,
-    admin,
+    profit,
     user,
   }: {
     children: React.ReactNode
     course: React.ReactNode
     reduction: React.ReactNode
     notification: React.ReactNode
-    admin: React.ReactNode
+    profit: React.ReactNode
     user: React.ReactNode
   }) {
     return (
-      <main>
-        {children}
-        {course}
+      <main className="grid grid-cols-3 grid-rows-3 gap-4">
         {reduction}
+        {course}
         {notification}
-        {admin}
+        {profit}
         {user}
+        {children}
       </main>
     )
   }

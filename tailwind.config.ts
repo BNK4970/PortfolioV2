@@ -11,6 +11,7 @@ const config: Config = {
       colors: {
         background: "rgb(var(--background))",
         foreground: "rgb(var(--foreground))",
+        "foreground-secondary": "rgb(var(--foreground-secondary))",
         primary: "rgb(var(--primary))",
         secondary: "rgb(var(--secondary))",
         blur: "rgb(var(--blur))",

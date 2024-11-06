@@ -11,6 +11,7 @@
     /* couleurs */
     --background: 0, 1, 13; /* Subtil ajout de bleu pour plus de profondeur */
     --foreground: 209, 209, 209; /* Gris doux pour le confort visuel */
+    --foreground-secondary: 120, 120, 120; /* Gris doux pour le confort visuel */
     --primary: 122, 101, 228; /* Violet plus saturé pour un effet néon */
     --secondary: 42, 30, 88; /* Teinte plus riche pour un contraste marqué */
     --blur: 27, 11, 64; /* Bleu nuit pour des effets mystiques */
